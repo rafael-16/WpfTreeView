@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfTreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTreeView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TreeView>
+            <TextBlock Text="Учебники по программированию" 
+                       FontStyle="Italic" Margin="20 0" Foreground="MediumBlue"
+                       Background="AntiqueWhite"/>
+            <TreeViewItem Header="Языки программирования" IsExpanded="True">
+                <TreeViewItem Header="C/C++" Background ="Khaki" IsExpanded="True">
+                    <TreeViewItem 
+                        Header="Герберт Шилдт. С++ для начинающих. Шаг за шагом"
+                        Selected="Book_Selection" />
+                    <TreeViewItem 
+                        Header="Роберт Лафоре. Объектно-ориентированное программирование в С++"
+                        Selected="Book_Selection" />
+                </TreeViewItem>
+                <TreeViewItem Header="C#" Background="LightSeaGreen" IsExpanded="True">
+                    <TreeViewItem Header="Эндрю Стиллмен, Дженнифер Грин. Head First. Изучаем C# (2022)"
+                                  Selected="Book_Selection" />
+                    <TreeViewItem Header="Марк Прайс. C# 10 и .NET 6. Современная кроссплатформенная разработка"
+                                  Selected="Book_Selection" />
+                </TreeViewItem>
+                <TreeViewItem Header="Java" Background="Orange" />
+                <TreeViewItem Header="JavaScript" Background="DeepSkyBlue" />
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</Window>
